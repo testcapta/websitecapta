@@ -1,0 +1,680 @@
+/* Lettertype definities */
+@font-face {
+    font-family: 'Casagrande';
+    src: url(../fonts/Casagrande.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mixta Pro';
+    src: url(../fonts/MixtaPro-Thin.otf) format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Reset en basis stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header stijlen */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Logo stijl */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#headerLogo {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Header content layout */
+.header-content {
+    display: flex;
+    height: 100%;
+}
+
+/* Gemeenschappelijke stijlen voor linker en rechter secties */
+.left-section, .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Linker sectie stijl */
+.left-section {
+    background-color: #6e4040;
+}
+
+/* Rechter sectie stijl */
+.right-section {
+    background-color: #333;
+}
+
+/* Slogan links stijl */
+#headerSloganLeft {
+    font-family: 'Casagrande', sans-serif;
+    font-size: 5vw;
+    color: #fff;
+    text-align: right;
+}
+
+/* Slogan rechts stijl */
+#headerSloganRight {
+    font-family: 'Mixta Pro', sans-serif;
+    font-weight: 100;
+    font-size: 5vw;
+    color: #fff;
+    text-align: left;
+}
+
+/* Menu knop stijl */
+#menuButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+}
+
+#menuButton img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#menuOpenIcon {
+    display: block;
+}
+
+#menuCloseIcon {
+    display: none;
+}
+
+#menuButton.active #menuOpenIcon {
+    display: none;
+}
+
+#menuButton.active #menuCloseIcon {
+    display: block;
+}
+
+/* Fullscreen menu stijl */
+#fullscreenMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 14, 16, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 999;
+}
+
+#fullscreenMenu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menuList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menuList li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#menuList li a {
+    font-family: 'Casagrande', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#menuList li a:hover {
+    color: #ccc;
+}
+/* Header + nav bar */
+
+
+/* Stijl voor de gehele afbeeldingengalerij sectie */
+#imageGallery {
+    background-color: rgba(22, 14, 16, 1); /* Donkere achtergrondkleur */
+    padding: 80px 20px; /* Ruimte boven/onder en links/rechts */
+    text-align: center; /* Centreer de inhoud */
+}
+
+/* Stijl voor de titel boven de afbeeldingen */
+#galleryTitle {
+    font-family: 'Mixta Pro', sans-serif; /* Gebruik Mixta Pro lettertype */
+    font-size: 80pt; /* Grote lettergrootte voor de titel */
+    line-height: 1; /* Strakke regelafstand */
+    letter-spacing: 0; /* Geen extra spatiëring tussen letters */
+    color: rgba(220, 215, 207, 0.8); /* Lichte tekstkleur met lichte transparantie */
+    margin-bottom: 150px; /* Ruimte onder de titel */
+    margin-top: 150px; /* Ruimte boven de titel */
+}
+
+/* Container voor alle afbeeldingen */
+#galleryImages {
+    display: flex; /* Gebruik flexbox voor layout */
+    justify-content: center; /* Centreer horizontaal */
+    align-items: center; /* Centreer verticaal */
+    gap: 100px; /* Ruimte tussen de afbeeldingen */
+    max-width: 1200px; /* Maximale breedte van de container */
+    margin: 0 auto; /* Centreer de container */
+}
+
+/* Stijl voor de zijkanten met twee afbeeldingen */
+.side-images {
+    display: flex;
+    flex-direction: column; /* Stapel de afbeeldingen verticaal */
+}
+
+/* Stijl voor de kleinere zijafbeeldingen */
+.side-image {
+    width: 340px; /* Breedte van de zijafbeeldingen */
+    height: 242px; /* Hoogte van de zijafbeeldingen */
+    object-fit: cover; /* Zorg dat de afbeelding de ruimte vult zonder vervorming */
+}
+
+/* Stijl voor de grotere middelste afbeelding */
+#centerImage {
+    width: 648px; /* Breedte van de middelste afbeelding */
+    height: 864px; /* Hoogte van de middelste afbeelding */
+    object-fit: cover; /* Zorg dat de afbeelding de ruimte vult zonder vervorming */
+}
+
+/* Media query voor responsiviteit op kleinere schermen */
+@media (max-width: 1200px) {
+    #galleryTitle {
+        font-size: 60px; /* Kleinere lettergrootte op kleinere schermen */
+    }
+
+    #galleryImages {
+        flex-direction: column; /* Stapel alle afbeeldingen verticaal */
+    }
+
+    .side-images {
+        flex-direction: row; /* Plaats zijafbeeldingen naast elkaar */
+        justify-content: center; /* Centreer de zijafbeeldingen */
+    }
+
+    .side-image, #centerImage {
+        width: 100%; /* Volledige breedte op kleinere schermen */
+        height: auto; /* Automatische hoogte om verhoudingen te behouden */
+        max-width: 500px; /* Maximale breedte gelijk aan de originele middelste afbeelding */
+    }
+}
+
+/* Stijl voor de features sectie */
+#featuresSection {
+    background-color: rgba(220, 215, 207, 1); /* Lichtgrijze achtergrond */
+    padding: 60px 20px;
+    padding-top: 150px;
+    padding-bottom: 120px;
+    
+}
+
+/* Container voor de feature items */
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Verminderde gap om de items dichter bij elkaar te plaatsen */
+    max-width: 1333px; /* 431px * 3 + 20px * 2 (voor de gaps) */
+    margin: 0 auto;
+}
+
+/* Stijl voor elk feature item */
+.feature-item {
+    width: 431px; /* Vaste breedte zoals gespecificeerd */
+}
+
+/* Stijl voor de afbeeldingscontainer */
+.feature-image {
+    border: 2px solid #000000; /* Dunne zwarte rand */
+    width: 431px;
+    height: 576px; /* Vaste hoogte zoals gespecificeerd */
+    margin-bottom: 10px;
+    overflow: hidden; /* Verbergt delen van de afbeelding die buiten de container vallen */
+}
+
+/* Stijl voor de afbeeldingen */
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de container vult zonder vervorming */
+    display: block;
+}
+
+/* Stijl voor de bijschriften */
+.feature-caption {
+    font-family: 'Casagrande', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(22, 14, 16, 1);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Media query voor responsiviteit */
+@media (max-width: 1333px) {
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        margin-bottom: 40px;
+    }
+}
+
+/* Statement sectie stijl */
+#statementSection {
+    background-color: rgba(22, 14, 16, 1); /* Donkere achtergrondkleur */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Hoofdtitel stijl */
+#statementTitle {
+    font-family: 'Mixta Pro', sans-serif;
+    font-weight: 100; /* Thin */
+    font-size: 80px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: rgba(220, 215, 207, 0.8);
+    margin-bottom: 40px;
+}
+
+/* Knop stijl */
+.statement-button {
+    font-family: 'Casagrande', sans-serif;
+    font-size: 14pt;
+    letter-spacing: 4.2px; /* 30% van 14px */
+    text-transform: uppercase;
+    color: rgba(220, 215, 207, 1);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Icoon stijl voor knoppen */
+.button-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Slider container stijl */
+.slider-container {
+    position: relative;
+    max-width: 1450px; /* Aangepast om ruimte te maken voor 3 afbeeldingen en pijlen */
+    margin: 60px auto;
+    padding: 0 60px; /* Ruimte voor de pijlen */
+}
+
+/* Slider stijl */
+.slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Verminderde ruimte tussen afbeeldingen */
+    overflow: hidden;
+}
+
+/* Afbeelding stijl in slider */
+.slider img {
+    width: 430px; /* Exacte breedte zoals gespecificeerd */
+    height: 573px; /* Exacte hoogte zoals gespecificeerd */
+    object-fit: cover;
+    flex-shrink: 0; /* Voorkomt dat afbeeldingen krimpen */
+}
+
+/* Navigatiepijl stijl */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: rgba(220, 215, 207, 1);
+    border: none;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.slider-arrow.left {
+    left: 0;
+}
+
+.slider-arrow.right {
+    right: 0;
+}
+
+/* Media query voor responsiviteit */
+@media (max-width: 1450px) {
+    .slider-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .slider {
+        justify-content: flex-start; /* Start vanaf links op kleinere schermen */
+        overflow-x: auto; /* Maakt horizontaal scrollen mogelijk */
+        -webkit-overflow-scrolling: touch; /* Voor soepel scrollen op iOS */
+        scroll-snap-type: x mandatory; /* Voor een 'snapping' effect tijdens scrollen */
+    }
+
+    .slider img {
+        scroll-snap-align: start; /* Zorgt ervoor dat afbeeldingen 'snappen' tijdens scrollen */
+    }
+
+    .slider-arrow {
+        display: none; /* Verberg pijlen op kleinere schermen */
+    }
+}
+
+/* Stijl voor de Dark Madness sectie */
+.dark-madness {
+    background-color: rgba(22, 14, 16, 1); /* Donkere achtergrondkleur */
+    padding: 80px 20px; /* Ruimte rondom de inhoud */
+}
+
+/* Wrapper voor de inhoud, centreert en beperkt de maximale breedte */
+.content-wrapper {
+    max-width: calc(100% - 40px); /* 20px aan elke kant */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Witte achtergrond container */
+.white-background {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    margin: 0 20px; /* 20px marge aan beide zijden */
+}
+
+/* Container voor de afbeeldingen */
+.image-container {
+    width: 636px;
+    height: 636px;
+    position: relative; /* Voor positionering van de kleine afbeelding */
+}
+
+/* Stijl voor de grote hoofdafbeelding */
+.large-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Stijl voor de kleine overlay afbeelding */
+.small-image {
+    position: absolute;
+    bottom: 50px;
+    right: -700px;
+    width: 140px;
+    height: 186px;
+    object-fit: cover;
+}
+
+/* Container voor de tekstuele inhoud */
+.text-container {
+    width: calc(100% - 736px);
+    padding-left: 50px;
+}
+
+/* Media query voor responsiviteit op kleinere schermen */
+@media (max-width: 1200px) {
+    .white-background {
+        flex-direction: column;
+        align-items: center;
+        margin: 0; /* Verwijder zijmarges op kleinere schermen */
+    }
+
+    .image-container {
+        margin-bottom: 50px;
+    }
+
+    .text-container {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .small-image {
+        position: static;
+        margin-top: 20px;
+    }
+}
+/* Stijl voor de knop 'meer materialen' */
+.material-button {
+    font-family: 'Casagrande', sans-serif;
+    font-size: 14pt; /* 14 punten */
+    letter-spacing: 4.2px; /* 30% van 14pt */
+    text-transform: uppercase;
+    color: rgba(22, 14, 16, 1); /* Donkere tekstkleur */
+    background-color: transparent;
+    border: none; /* Geen omkadering */
+    padding: 0; /* Verwijder eventuele padding */
+    cursor: pointer;
+    display: inline; /* Veranderd van flex naar inline */
+}
+
+/* Stijl voor het '+' icoon in de knop */
+.button-icon {
+    margin-right: 10px;
+}
+
+/* Stijl voor de hoofdtitel */
+.section-title {
+    font-family: 'Mixta Pro', sans-serif;
+    font-size: 80pt; /* 80 punten */
+    line-height: 1;
+    letter-spacing: 0; /* 0% letterspatiëring */
+    color: rgba(22, 14, 16, 1); /* Donkere tekstkleur voor witte achtergrond */
+    margin-bottom: 40px; /* Meer ruimte onder de titel */
+}
+
+/* Stijl voor de beschrijvende tekst */
+.section-description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(22, 14, 16, 0.8); /* Donkere, licht transparante tekstkleur */
+    margin-bottom: 30px; /* Meer ruimte onder de beschrijving */
+}
+
+/* Stijl voor de naam van het materiaal */
+.material-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+
+    color: rgba(22, 14, 16, 1);
+    margin-bottom: 40px; /* Meer ruimte onder de materiaalnaam */
+}
+
+/* Stijl voor de knop 'meer materialen' */
+.material-button {
+    font-family: 'Casagrande', sans-serif;
+    font-size: 14pt;
+    letter-spacing: 4.2px; /* 30% van 14pt */
+    text-transform: uppercase;
+    color: rgba(22, 14, 16, 1);
+    margin-top: 100px;
+    margin-right: 550px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-block; /* Veranderd naar inline-block voor betere spacing */
+}
+
+/* Stijl voor het '+' icoon in de knop */
+.button-icon {
+    margin-right: 10px;
+}
+
+/* Container voor de tekstuele inhoud */
+.text-container {
+    width: calc(100% - 736px);
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centreert de inhoud verticaal */
+}
+
+/* Stijl voor de moderne interieur sectie */
+.modern-interior {
+    width: 100%;
+    overflow: hidden; /* Voorkomt horizontale scrollbar */
+}
+
+/* Container voor de afbeelding */
+.image-container {
+    width: 100%;
+    height: 80vh; /* 80% van de viewport hoogte, pas aan indien nodig */
+    position: relative;
+}
+
+/* Stijl voor de full-width afbeelding */
+.full-width-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Bedekt de hele container zonder vervorming */
+    object-position: center; /* Centreert de afbeelding binnen de container */
+}
+
+/* Media query voor responsiviteit op kleinere schermen */
+@media (max-width: 768px) {
+    .image-container {
+        height: 50vh; /* Verminderde hoogte op mobiele apparaten */
+    }
+}
+
+/* Algemene stijl voor de site footer */
+.site-footer {
+    background-color: rgba(22, 14, 16, 1);    ;
+    color: #ffffff;
+    padding: 60px 40px;
+    font-family: 'Mixta Pro', sans-serif;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+}
+
+/* Stijl voor het bovenste deel van de footer */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+/* Stijl voor de hoofdtitel */
+.footer-title h2 {
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Stijl voor de navigatie lijst */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Stijl voor de navigatie links */
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Stijl voor het middelste deel van de footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Stijl voor elke sectie in het middelste deel */
+.footer-section {
+    flex: 1;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    
+}
+
+/* Stijl voor het copyright gedeelte */
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Media query voor responsiviteit op kleinere schermen */
+@media (max-width: 768px) {
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+

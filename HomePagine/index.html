@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pas Normal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Logo in de linkerbovenhoek -->
+        <div class="logo">
+            <img src="../images/pasnormal-logo-zwart.png" alt="Pas Normal logo" id="headerLogo">
+        </div>
+        
+        <div class="header-content">
+            <!-- Linker sectie van de header -->
+            <div class="left-section">
+                <h1 id="headerSloganLeft" class="slogan-left">SOLID AS STONE.</h1>
+            </div>
+            
+            <!-- Rechter sectie van de header -->
+            <div class="right-section">
+                <h2 id="headerSloganRight" class="slogan-right">Crafted with care.</h2>
+            </div>
+        </div>
+        
+        <!-- Menu knop in de rechterbovenhoek -->
+        <button class="menu-button" id="menuButton">
+            <img src="../elements/open-menu.png" alt="Menu" class="menu-icon" id="menuOpenIcon">
+            <img src="../elements/close-menu.png" alt="Sluiten" class="close-icon" id="menuCloseIcon">
+        </button>
+    </header>
+
+    <!-- Uitklapmenu -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <nav>
+            <ul id="menuList">
+                <li><a href="#" id="menuItemHome">Home</a></li>
+                <li><a href="#" id="menuItemAbout">Over ons</a></li>
+                <li><a href="#" id="menuItemProducts">Producten</a></li>
+                <li><a href="#" id="menuItemContact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Sectie na de header -->
+    <!-- Sectie voor de afbeeldingengalerij -->
+    <section class="image-gallery" id="imageGallery">
+        <!-- Titel van de galerij -->
+        <h2 id="galleryTitle" class="gallery-title">
+            Vloeren<br>
+            die tot leven komen.<br>
+            Natuursteen en<br>
+            maatwerk<br>
+            gebeiteld tot kunst.
+        </h2>
+        <!-- Container voor alle afbeeldingen -->
+        <div class="gallery-images" id="galleryImages">
+            <!-- Linker kolom met twee afbeeldingen -->
+            <div class="side-images" id="leftImages">
+                <img src="../images/homepagina-pic/left-b1.png" alt="Trap" class="side-image">
+                <img src="../images/homepagina-pic/right-b1.png" alt="Marmer patroon" class="side-image">
+            </div>
+            <!-- Centrale, grotere afbeelding -->
+            <img src="../images/homepagina-pic/center-b1.png" alt="Marmeren douche" class="center-image" id="centerImage">
+            <!-- Rechter kolom met twee afbeeldingen -->
+            <div class="side-images" id="rightImages">
+                <img src="../images/homepagina-pic/left-b1.png" alt="Marmer patroon" class="side-image">
+                <img src="../images/homepagina-pic/right-b1.png" alt="Marmeren vloer" class="side-image">
+            </div>
+        </div>
+    </section>
+    <!-- Sectie voor de categorieën -->
+    <section id="featuresSection" class="features">
+        <div class="feature-container">
+            <div class="feature-item">
+                <div class="feature-image">
+                    <img src="../images/homepagina-pic/right-b1.png" alt="Materialen">
+                </div>
+                <p class="feature-caption">materialen</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image">
+                    <img src="../images/homepagina-pic/left-b1.png" alt="Maatwerk">
+                </div>
+                <p class="feature-caption">maatwerk</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image">
+                    <img src="../images/homepagina-pic/right-b1.png" alt="Atelier">
+                </div>
+                <p class="feature-caption">atelier</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectie voor het statement en de slider -->
+    <!-- Statement sectie met slider -->
+    <section id="statementSection" class="statement">
+        <!-- Hoofdtitel -->
+        <h2 id="statementTitle">Geef jouw interieur en<br>exterieur het statement<br>dat het verdient.</h2>
+        
+        <!-- Bovenste knop -->
+        <button id="upperButton" class="statement-button">
+            <span class="button-icon">+</span>
+            onze aanpak
+        </button>
+        
+        <!-- Slider container -->
+        <div class="slider-container">
+            <!-- Linker navigatiepijl -->
+            <button class="slider-arrow left">&lt;</button>
+            
+            <!-- Slider met afbeeldingen -->
+            <div class="slider" id="imageSlider">
+                <img src="../images/homepagina-pic/center-b1.png" alt="Interieur 1">
+                <img src="../images/homepagina-pic/left-b1.png" alt="Interieur 2">
+                <img src="../images/homepagina-pic/right-b1.png" alt="Interieur 3">
+            </div>
+            
+            <!-- Rechter navigatiepijl -->
+            <button class="slider-arrow right">&gt;</button>
+        </div>
+        
+        <!-- Onderste knop -->
+        <button id="lowerButton" class="statement-button">
+            <span class="button-icon">+</span>
+            bekijk onze realisaties
+        </button>
+    </section>
+    <!-- Sectie voor Dark Madness presentatie -->
+    <!-- Sectie voor Dark Madness presentatie -->
+    <section id="darkMadnessSection" class="dark-madness">
+        <div class="content-wrapper">
+            <!-- Witte achtergrond container -->
+            <div class="white-background">
+                <!-- Container voor afbeeldingen -->
+                <div class="image-container">
+                    <!-- Grote hoofdafbeelding -->
+                    <img src="../images/homepagina-pic/center-b1.png" alt="Large marble texture" class="large-image">
+                    <!-- Kleine overlay afbeelding -->
+                    <img src="../images/homepagina-pic/left-b1.png" alt="Small marble texture" class="small-image">
+                </div>
+                <!-- Container voor tekstuele inhoud -->
+                <div class="text-container">
+                    <!-- Hoofdtitel van de sectie -->
+                    <h2 class="section-title">Dark madness</h2>
+                    <!-- Beschrijvende paragraaf -->
+                    <p class="section-description">
+                        Met zijn mystieke aura en grijze aders voegt deze natuursteen een vleugje magie toe aan elke ruimte. Of het nu een weelderige badkamer is of uw eigen thuis, Carrara neemt je mee op een grafische reis. Laat je betoveren door zijn verfijnde uitstraling en geef jouw interieur een uniek karakter.
+                    </p>
+                    <!-- Naam van het materiaal -->
+                    <p class="material-name">Onyx Black (Spanje)</p>
+                    <!-- Knop voor meer materialen -->
+                    <button class="material-button">
+                        <span class="button-icon">+</span>meer materialen
+                    </button>                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Full-width moderne keuken/interieur sectie -->
+    <section id="modernInteriorSection" class="modern-interior">
+        <div class="image-container">
+            <!-- Full-width afbeelding van modern interieur -->
+            <img src="../images/homepagina-pic/right-b1.png" alt="Modern kitchen interior with wooden cabinets and marble island" class="full-width-image">
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+<footer class="site-footer">
+    <!-- Bovenste deel van de footer -->
+    <div class="footer-top">
+        <!-- Titel sectie -->
+        <div class="footer-title">
+            <h2>Step<br>into our world</h2>
+        </div>
+        <!-- Navigatie menu -->
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">OVER ONS</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">MATERIALEN</a></li>
+                <li><a href="#">REALISATIES</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Middelste deel van de footer -->
+    <div class="footer-bottom">
+        <!-- Sectie voor showroom informatie -->
+        <div class="footer-section">
+            <p>KOM LANGS IN ONZE SHOWROOM,<br>MAAK HIER EEN AFSPRAAK</p>
+        </div>
+        <!-- Sectie voor realisaties -->
+        <div class="footer-section">
+            <p>BEKIJK ONZE REALISATIES</p>
+        </div>
+        <!-- Sectie voor sociale media links -->
+        <div class="footer-section">
+            <p>INSTAGRAM | FB | LINKEDIN | PINTEREST</p>
+        </div>
+    </div>
+    <!-- Onderste deel van de footer met copyright informatie -->
+    <div class="footer-copyright">
+        <p>COPYRIGHT</p>
+        <p>PRIVACY POLICY / COOKIE POLICY</p>
+    </div>
+</footer>
+</html>
